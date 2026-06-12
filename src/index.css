@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400&display=swap');
+
+@theme{
+    --color-font-white : #FFFFFF;
+    --color-blue-dark : #0B0D17;
+    --color-blue-light : #D0D6F9;
+
+    --font-barlow-condensed : "Barlow Condensed" , sans-serif;
+}
+
+@utility text-nav-style{
+    font-family: var(--font-barlow-condensed);
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight : 300
+  }
+
