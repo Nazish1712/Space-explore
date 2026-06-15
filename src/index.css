@@ -7,6 +7,19 @@
     --color-blue-light : #D0D6F9;
 
     --font-barlow-condensed : "Barlow Condensed" , sans-serif;
+
+    --animate-slide-in-right : slideInRight 300ms ease-out forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
 }
 
 @utility text-nav-style{
