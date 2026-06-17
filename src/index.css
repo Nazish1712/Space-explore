@@ -1,14 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed&family=Bellefair&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&family=Manrope:wght@200..800&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400&display=swap');
 
 @theme{
     --color-font-white : #FFFFFF;
     --color-blue-dark : #0B0D17;
     --color-blue-light : #D0D6F9;
-
+    
+    --font-barlow : "Barlow" , sans-serif;
     --font-barlow-condensed : "Barlow Condensed" , sans-serif;
-
+    --font-bellefair : "Bellefair", sans-serif;
     --animate-slide-in-right : slideInRight 300ms ease-out forwards;
+    --animate-shimmer: shimmer 3s linear infinite;
+    --animate-cosmic-pulse: cosmic-pulse 4s ease-out infinite;
+}
+
+@keyframes cosmic-pulse{
+    0% {
+        box-shadow: 0 0 0 0 rgba(255 , 255, 255, 0.5) 
+    }
+    70% {
+        box-shadow: 0 0 0 40px rgba(255 , 255, 255, 0)
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255 , 255, 255, 0)
+    }
 }
 
 @keyframes slideInRight {
@@ -22,10 +39,35 @@
     }
 }
 
+@keyframes shimmer {
+    0%{
+        background-position: 200% center;
+    }
+    100%{
+        background-position: 0% center;
+    }
+}
+
+
+
 @utility text-nav-style{
     font-family: var(--font-barlow-condensed);
-    font-size: 16px;
     text-transform: uppercase;
-    font-weight : 300
+    font-weight : 300;
+  }
+
+  @utility heading-one-text-style{
+    font-family: var(--font-bellefair);
+    text-transform: uppercase;
+    font-weight: 300;
+    background: linear-gradient(110deg, #d4d7e6 40%, #ffffff 46%, #ffffff 54% ,#d4d7e6 60%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @utility paragraph-style{
+    font-family: var(--font-barlow);
+    font-weight: 300;
   }
 

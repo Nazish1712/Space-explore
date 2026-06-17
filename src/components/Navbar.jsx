@@ -50,7 +50,7 @@ const [activeTab, setActiveTab] = useState("home")
                   <li key={link.id} className={`relative group cursor-pointer  md:tracking-wide  lg:tracking-widest transition-colors duration-300 ${
                    activeTab === link.id ? "text-font-white" : "text-white/70 hover:text-font-white"
                    }`} >
-                   <Link to={link.to} className="flex md:gap-2  lg:gap-3 w-full h-full items-center" onClick={()=>setActiveTab(link.id)}>
+                   <Link to={link.to} className="flex md:gap-2  lg:gap-3 w-full h-full items-center md:text-lg lg:text-xl " onClick={()=>setActiveTab(link.id)}>
                     <span className="font-semibold">{link.number}</span>
                      <span>{link.title}</span>
                      </Link>
@@ -69,7 +69,7 @@ const [activeTab, setActiveTab] = useState("home")
             </div>}
             
             {mobileMenuIsOpen && 
-            <div className="md:hidden bg-white/10 backdrop-blur-md fixed top-0 right-0 h-screen z-50 pt-9 pl-8 w-[65%] animate-slide-in-right">
+            <div className="md:hidden bg-white/5 backdrop-blur-md fixed top-0 right-0 h-screen z-50 pt-9 pl-8 w-[65%] animate-slide-in-right">
                 <div className="cursor-pointer flex justify-end pr-7 mb-20">
                 <img alt="menu-open" src="icon-close.svg" className="w-6 h-6" onClick={()=> setMobileMenuIsOpen(false)}></img>
                 </div>
@@ -77,7 +77,7 @@ const [activeTab, setActiveTab] = useState("home")
                 {navLinks.map((link, index)=>(
                 <li key={link.id} className={`relative group cursor-pointer tracking-wide py-1 transition-colors duration-300 
                     ${activeTab === link.id ? "text-font-white" : "text-white/70 hover:text-font-white"}`} >
-                    <Link to={link.to} className="flex gap-2 w-full h-full items-center" onClick={()=>{setMobileMenuIsOpen(false); setActiveTab(link.id);}}>
+                    <Link to={link.to} className="flex gap-2 w-full h-full items-center text-base" onClick={()=>{setMobileMenuIsOpen(false); setActiveTab(link.id);}}>
                    <span className="font-semibold ">{link.number}</span>
                     <span>{link.title}</span>
                     </Link>
