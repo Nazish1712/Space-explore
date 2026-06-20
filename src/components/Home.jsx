@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 const Home = () => {
   return (
@@ -18,9 +19,12 @@ const Home = () => {
               experience!</p>
       </div>
       <div className="flex items-center justify-center">
+        <Link to="/destination">
         <button className="w-36 h-36 md:w-50 md:h-50 lg:w-[274px] lg:h-[274px] rounded-full bg-font-white text-blue-dark uppercase font-bellefair 
         text-xl md:text-2xl tracking-widest transition-all duration-500 ease-out hover:shadow-[0_0_0_88px_rgba(255,255,255,0.1)] 
         cursor-pointer animate-cosmic-pulse hover:animate-none lg:mb-2">EXPLORE</button>
+        </Link>
+        
       </div>
     </div>
    </section>
@@ -29,3 +33,4 @@ const Home = () => {
 }
 
 export default Home
+

@@ -1,13 +1,13 @@
 import React from 'react'
 import {useState} from "react"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 
 
 const Navbar = () => {
     
 const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
 
-const [activeTab, setActiveTab] = useState("home")
+const location = useLocation()
 
     const navLinks = [
         {
@@ -39,7 +39,7 @@ const [activeTab, setActiveTab] = useState("home")
   return (
     <nav className="fixed top-0 w-full pt-8 px-5 md:px-0 md:pt-0 lg:pt-8 flex items-center justify-between lg:justify-start z-50 transition-all ">
             <div className="lg:ml-16 md:ml-10 shrink-0 cursor-pointer">
-            <Link to="/" onClick={()=>setActiveTab("home")} >
+            <Link to="/">
                 <img alt="logo" src="logo.svg" className=" w-10 h-10 lg:w-12 lg:h-12"></img>
             </Link>
             </div>
@@ -48,14 +48,14 @@ const [activeTab, setActiveTab] = useState("home")
                 <ul className="flex text-nav-style md:gap-10 lg:gap-12">
                 {navLinks.map((link, index)=> (
                   <li key={link.id} className={`relative group cursor-pointer  md:tracking-wide  lg:tracking-widest transition-colors duration-300 ${
-                   activeTab === link.id ? "text-font-white" : "text-white/70 hover:text-font-white"
+                   location.pathname === link.to ? "text-font-white" : "text-white/70 hover:text-font-white"
                    }`} >
-                   <Link to={link.to} className="flex md:gap-2  lg:gap-3 w-full h-full items-center md:text-lg lg:text-xl " onClick={()=>setActiveTab(link.id)}>
+                   <Link to={link.to} className="flex md:gap-2  lg:gap-3 w-full h-full items-center md:text-lg lg:text-xl ">
                     <span className="font-semibold">{link.number}</span>
                      <span>{link.title}</span>
                      </Link>
                     <div className={`absolute md:-bottom-8 lg:-bottom-10 left-0 h-1 w-full transition-transform bg-font-white origin-left duration-300 ease-out ${
-                         activeTab === link.id  ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100 bg-white/50"
+                         location.pathname === link.to  ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100 bg-white/50"
                     }`}></div>
                     </li>
               ))}
@@ -74,15 +74,15 @@ const [activeTab, setActiveTab] = useState("home")
                 <img alt="menu-open" src="icon-close.svg" className="w-6 h-6" onClick={()=> setMobileMenuIsOpen(false)}></img>
                 </div>
                 <ul className="flex flex-col text-font-white text-nav-style gap-6">
-                {navLinks.map((link, index)=>(
+                {navLinks.map((link)=>(
                 <li key={link.id} className={`relative group cursor-pointer tracking-wide py-1 transition-colors duration-300 
-                    ${activeTab === link.id ? "text-font-white" : "text-white/70 hover:text-font-white"}`} >
-                    <Link to={link.to} className="flex gap-2 w-full h-full items-center text-base" onClick={()=>{setMobileMenuIsOpen(false); setActiveTab(link.id);}}>
+                    ${location.pathname === link.to ? "text-font-white" : "text-white/70 hover:text-font-white"}`} >
+                    <Link to={link.to} className="flex gap-2 w-full h-full items-center text-base" onClick={()=>{setMobileMenuIsOpen(false)}}>
                    <span className="font-semibold ">{link.number}</span>
                     <span>{link.title}</span>
                     </Link>
                  <div className={` absolute right-0 top-0 h-full w-1 transition-colors duration-300 ${
-                    activeTab === link.id ? "bg-font-white" : "bg-transparent group-hover:bg-white/30"
+                    location.pathname === link.to ? "bg-font-white" : "bg-transparent group-hover:bg-white/30"
                     }`}></div>
                 </li>
              ))}  
