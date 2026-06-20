@@ -16,7 +16,7 @@ const Crew = () => {
     <main className="pt-28 md:pt-36 lg:pt-48 pb-6 min-h-dvh flex flex-col max-w-2xl lg:max-w-7xl m-auto px-4 text-font-white">
       <h2 className="flex justify-center md:justify-start gap-6 font-barlow-condensed tracking-[2.7px] md:tracking-[3.38px] lg:tracking-[4.2px] text-base md:text-xl lg:text-[28px] uppercase mb-16">
         <span className="text-gray-500 font-semibold">02</span>
-        <span>MEET YOUT CREW</span>
+        <span>MEET YOUR CREW</span>
         </h2>
       <div className="flex flex-col lg:flex-row justify-around lg:justify-between items-center lg:items-center grow w-full md:gap-0">
       <div className="flex flex-col justify-between items-center lg:items-start lg:text-left lg:w-1/2">
@@ -31,7 +31,7 @@ const Crew = () => {
          </div>
       </div>
       <div className="w-full flex justify-center items-end lg:items-center lg:w-1/2">
-        <img alt={currentMember.image} src={currentMember.image} className="
+        <img alt={currentMember.image} src={currentMember.image} loading="lazy" className="
         h-[32vh] md:h-[450px] lg:h-[650px] object-contain object-bottom lg:object-center"></img>
       </div>
       </div>

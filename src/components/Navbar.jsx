@@ -61,7 +61,6 @@ const location = useLocation()
               ))}
                 </ul>
             </div>
-
             {/* mobile menu */}
             {!mobileMenuIsOpen && 
             <div className="md:hidden cursor-pointer" onClick={()=>setMobileMenuIsOpen(true)}>
@@ -69,14 +68,14 @@ const location = useLocation()
             </div>}
             
             {mobileMenuIsOpen && 
-            <div className="md:hidden bg-white/5 backdrop-blur-md fixed top-0 right-0 h-screen z-50 pt-9 pl-8 w-[65%] animate-slide-in-right">
+            <div className="md:hidden bg-transparent backdrop-blur-lg fixed top-0 right-0 h-screen z-50 pt-9 pl-8 w-[65%] animate-slide-in-right">
                 <div className="cursor-pointer flex justify-end pr-7 mb-20">
                 <img alt="menu-open" src="icon-close.svg" className="w-6 h-6" onClick={()=> setMobileMenuIsOpen(false)}></img>
                 </div>
-                <ul className="flex flex-col text-font-white text-nav-style gap-6">
+                <ul className="flex flex-col text-font-white font-barlow-condensed uppercase text-2xl font-light gap-6">
                 {navLinks.map((link)=>(
                 <li key={link.id} className={`relative group cursor-pointer tracking-wide py-1 transition-colors duration-300 
-                    ${location.pathname === link.to ? "text-font-white" : "text-white/70 hover:text-font-white"}`} >
+                    ${location.pathname === link.to ? "text-font-white" : "text-white/90 hover:text-font-white"}`} >
                     <Link to={link.to} className="flex gap-2 w-full h-full items-center text-base" onClick={()=>{setMobileMenuIsOpen(false)}}>
                    <span className="font-semibold ">{link.number}</span>
                     <span>{link.title}</span>

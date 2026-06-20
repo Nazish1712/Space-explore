@@ -20,7 +20,7 @@ const currentPlanet = destinations.find((planet)=>(planet.id === activeTabId))
             <span className="text-gray-500 font-semibold">01</span><span>PICK YOUR DESTINATION</span>
             </h2>
           <div className="flex w-full items-center justify-center my-10 md:my-11 lg:mt-20 ">
-            <img className="h-40 w-40 md:h-72 md:w-72 lg:h-[445px] lg:w-[445px] animate-[spin_120s_linear]" alt={currentPlanet.image} src={currentPlanet.image}></img>
+            <img className="h-40 w-40 md:h-72 md:w-72 lg:h-[445px] lg:w-[445px] animate-[spin_120s_linear]" alt={currentPlanet.image} src={currentPlanet.image} loading="lazy"></img>
           </div>
         </div>
 
