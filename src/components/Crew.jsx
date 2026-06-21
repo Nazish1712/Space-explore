@@ -18,7 +18,7 @@ const Crew = () => {
         <span className="text-gray-500 font-semibold">02</span>
         <span>MEET YOUR CREW</span>
         </h2>
-      <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-6 lg:gap-0 mt-4 lg:mt-6">
+      <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-6 lg:gap-0 mt-3">
       <div className="flex flex-col justify-between items-center lg:items-start lg:text-left lg:w-1/2">
         <h2 className="font-bellefair uppercase text-white/50 text-base md:text-2xl 
         lg:text-[32px] text-center mb-2 md:mb-4">{currentMember.role}</h2>
