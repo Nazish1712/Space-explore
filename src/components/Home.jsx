@@ -4,9 +4,9 @@ import {Link} from "react-router-dom"
 const Home = () => {
   return (
    <section className="h-dvh w-full bg-cover bg-center bg-no-repeat 
-   bg-[url('background-home-mobile.jpg')]
-   md:bg-[url('background-home-tablet.webp')]
-   lg:bg-[url('background-home-desktop.jpg')]">
+   bg-[url('/background-home-mobile.jpg')]
+   md:bg-[url('/background-home-tablet.webp')]
+   lg:bg-[url('/background-home-desktop.jpg')]">
     <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between h-full pt-28 md:pt-40 pb-20 md:pb-40 max-w-7xl px-4 lg:px-8 mx-auto text-font-white">
       <div className="flex flex-col gap-4 md:gap-6 items-center lg:items-start text-center lg:text-start">
         <h2 className="text-blue-light text-sm md:text-lg lg:text-[28px] tracking-[2.7px] md:tracking-[3px] lg:tracking-[4.75px] font-barlow-condensed uppercase">SO, YOU WANT TO TRAVEL TO</h2>

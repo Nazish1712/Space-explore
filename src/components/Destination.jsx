@@ -10,9 +10,9 @@ const currentPlanet = destinations.find((planet)=>(planet.id === activeTabId))
 
   return (
     <section className="min-h-dvh w-full bg-cover bg-center bg-no-repeat
-    bg-[url('background-destination-mobile.jpg')]
-    md:bg-[url('background-destination-tablet.jpg')]
-    lg:bg-[url('background-destination-desktop.jpg')]">
+    bg-[url('/background-destination-mobile.jpg')]
+    md:bg-[url('/background-destination-tablet.jpg')]
+    lg:bg-[url('/background-destination-desktop.jpg')]">
 
       <div className="pt-28 md:pt-36 lg:pt-40 pb-6 lg:pb-12 h-full flex flex-col lg:flex-row lg:justify-between lg:items-center lg:max-w-6xl items-center max-w-2xl m-auto px-4 text-font-white">
         <div className="w-full flex flex-col items-center md:items-start">

@@ -10,9 +10,9 @@ const Crew = () => {
 
   return (
     <section className="min-h-dvh w-full bg-cover bg-center bg-no-repeat
-    bg-[url('background-crew-mobile.jpg')]
-    md:bg-[url('background-crew-tablet.jpg')]
-    lg:bg-[url('background-crew-desktop.jpg')]">
+    bg-[url('/background-crew-mobile.jpg')]
+    md:bg-[url('/background-crew-tablet.jpg')]
+    lg:bg-[url('/background-crew-desktop.jpg')]">
     <main className="pt-28 md:pt-36 lg:pt-40 pb-6 lg:pb-12 min-h-dvh flex flex-col max-w-2xl lg:max-w-7xl m-auto px-4 text-font-white">
       <h2 className="flex justify-center md:justify-start gap-6 font-barlow-condensed tracking-[2.7px] md:tracking-[3.38px] lg:tracking-[4.2px] text-base md:text-xl lg:text-[28px] uppercase mb-16">
         <span className="text-gray-500 font-semibold">02</span>
