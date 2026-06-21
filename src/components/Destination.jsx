@@ -14,7 +14,7 @@ const currentPlanet = destinations.find((planet)=>(planet.id === activeTabId))
     md:bg-[url('background-destination-tablet.jpg')]
     lg:bg-[url('background-destination-desktop.jpg')]">
 
-      <div className="pt-28 md:pt-36 lg:pt-48 pb-6 h-full flex flex-col lg:flex-row lg:justify-between lg:items-center lg:max-w-6xl items-center max-w-2xl m-auto px-4 text-font-white">
+      <div className="pt-28 md:pt-36 lg:pt-40 pb-6 lg:pb-12 h-full flex flex-col lg:flex-row lg:justify-between lg:items-center lg:max-w-6xl items-center max-w-2xl m-auto px-4 text-font-white">
         <div className="w-full flex flex-col items-center md:items-start">
           <h2 className="flex gap-6 font-barlow-condensed tracking-[2.7px] md:tracking-[3.38px] lg:tracking-[4.2px] text-base md:text-xl lg:text-2xl uppercase">
             <span className="text-gray-500 font-semibold">01</span><span>PICK YOUR DESTINATION</span>

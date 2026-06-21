@@ -9,11 +9,11 @@ const Technology = () => {
   const currentSpaceInfra = technologyData.find((currentSpaceInfra)=>(currentSpaceInfra.id === activeSpaceInfraId))
 
   return (
-    <section className="h-dvh w-full bg-cover bg-center bg-no-repeat 
+    <section className="min-h-dvh w-full bg-cover bg-center bg-no-repeat 
     bg-[url('background-technology-mobile.jpg')]
     md:bg-[url('background-technology-tablet.jpg')]
     lg:bg-[url('background-technology-desktop.jpg')]">
-    <main className="pt-28 md:pt-36 lg:pt-48 pb-6 min-h-dvh flex flex-col  max-w-5xl lg:max-w-[1400px] m-auto text-font-white">
+    <main className="pt-28 md:pt-36 lg:pt-40 pb-6 lg:pb-12 min-h-dvh flex flex-col  max-w-5xl lg:max-w-[1200px] m-auto text-font-white">
       <h2 className="flex justify-center md:justify-start gap-6 font-barlow-condensed tracking-[2.7px] md:tracking-[3.38px] lg:tracking-[4.2px] text-base md:text-xl lg:text-[28px] uppercase mb-16 md:ml-6">
         <span className="text-gray-500 font-semibold">03</span>
         <span>SPACE LAUNCH 101</span>
@@ -23,11 +23,11 @@ const Technology = () => {
         <picture className="w-full flex justify-center">
         <source media="(min-width:1024px)" srcSet={currentSpaceInfra.imageDesktop}/>
         <img alt={currentSpaceInfra.image} src={currentSpaceInfra.image}
-        className="h-60 md:h-72 lg:h-[460px] w-full object-cover"></img>
+        className="h-60 md:h-72 lg:h-[460px] w-full object-cover lg:object-contain"></img>
         </picture>
        </div>
-      <div className="px-4 lg:px-0 lg:pl-3 lg:flex lg:justify-between lg:items-strech lg:gap-1 lg:w-1/2">
-      <nav className="flex lg:flex-col items-center justify-center lg:justify-between lg:items-stretch  gap-3 md:gap-4 mb-10 md:mb-12 lg:mb-0">
+      <div className="px-4 lg:px-0 lg:pl-3 lg:flex lg:justify-between lg:items-stretch lg:gap-1 lg:w-1/2">
+      <nav className="flex lg:flex-col items-center justify-center lg:justify-between lg:items-center  gap-3 md:gap-4 mb-10 md:mb-12 lg:mb-0 lg:gap-0">
         {technologyData.map((spaceInfra)=>(<button 
         key={spaceInfra.id} className={`h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 rounded-full cursor-pointer transition-colors duration-300 ease-out flex items-center justify-center ${activeSpaceInfraId === spaceInfra.id ?
             ("bg-font-white") : ("bg-transparent border border-white/30 hover:border-font-white")}`} onClick={()=>(setActiveSpaceInfraId(spaceInfra.id))}>
