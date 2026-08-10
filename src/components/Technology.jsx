@@ -16,7 +16,7 @@ const Technology = () => {
     lg:bg-[url('/background-technology-desktop.jpg')]">
       <main className="pt-28 md:pt-36 lg:pt-40 pb-6 lg:pb-12 min-h-dvh flex flex-col max-w-5xl lg:max-w-[1200px] m-auto text-font-white">
         
-        {/* Static Header */}
+     
         <h2 className="flex justify-center md:justify-start gap-6 font-barlow-condensed tracking-[2.7px] md:tracking-[3.38px] lg:tracking-[4.2px] text-base md:text-xl lg:text-[28px] uppercase mb-16 md:ml-6">
           <span className="text-gray-500 font-semibold">03</span>
           <span>SPACE LAUNCH 101</span>
@@ -24,7 +24,7 @@ const Technology = () => {
         
         <div className="flex flex-col lg:flex-row-reverse lg:justify-between lg:items-center lg:gap-4">
           
-          {/* Keyed Image Wrapper */}
+         
           <div className="w-full lg:w-1/2 flex justify-center items-center mb-9 md:mb-11 lg:mb-0">
             <motion.div
               key={currentSpaceInfra.id}
@@ -43,7 +43,7 @@ const Technology = () => {
           
           <div className="px-4 lg:px-0 lg:pl-3 lg:flex lg:justify-between lg:items-stretch lg:gap-1 lg:w-1/2">
             
-            {/* Static Navigation Buttons */}
+           
             <nav className="flex lg:flex-col items-center justify-center lg:justify-between lg:items-center gap-3 md:gap-4 mb-10 md:mb-12 lg:mb-0 lg:gap-0">
               {technologyData.map((spaceInfra) => (
                 <button
@@ -56,7 +56,7 @@ const Technology = () => {
               ))}
             </nav>
             
-            {/* Keyed Article Wrapper */}
+         
             <motion.article 
               key={currentSpaceInfra.id}
               className="flex flex-col justify-between items-center lg:items-start"
