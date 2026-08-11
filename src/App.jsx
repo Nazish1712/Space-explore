@@ -32,11 +32,11 @@ const appRouter = createBrowserRouter([
         element : <Destination/>
       },
       {
-        path : "technology",
+        path : "/technology",
         element : <Technology/>
       },
       {
-        path : "crew",
+        path : "/crew",
         element : <Crew/>
       }
     ],

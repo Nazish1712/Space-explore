@@ -1,6 +1,5 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { destinations } from '../data/destinationData'
-import { useState } from "react"
 import { motion } from "motion/react"
 
 const Destination = () => {
@@ -29,7 +28,7 @@ const Destination = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               className="h-40 w-40 md:h-72 md:w-72 lg:h-[445px] lg:w-[445px] animate-[spin_120s_linear]" 
-              alt={currentPlanet.image} 
+              alt={currentPlanet.title} 
               src={currentPlanet.image} 
               loading="lazy" 
             />
@@ -44,6 +43,7 @@ const Destination = () => {
             {destinations.map((planet) => (
               <button 
                 key={planet.id} 
+                aria-pressed={activeTabId === planet.id}
                 className={`uppercase font-barlow-condensed tracking-[2.3px] md:tracking-[2.7px] lg:tracking-[3.2px] text-sm md:text-base lg:text-lg font-normal pb-2 md:pb-3 lg:pb-4 cursor-pointer transition-all duration-300 
                 ${activeTabId === planet.id ? ("border-b-2 text-font-white") : ("border-b-2 border-transparent hover:border-white/50")}`} 
                 onClick={() => (setActiveTabId(planet.id))}

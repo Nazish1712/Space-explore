@@ -1,6 +1,5 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { technologyData } from "../data/technologyData"
-import { useState } from "react"
 import { motion } from "motion/react"
 
 const Technology = () => {
@@ -35,7 +34,7 @@ const Technology = () => {
             >
               <picture className="w-full flex justify-center">
                 <source media="(min-width:1024px)" srcSet={currentSpaceInfra.imageDesktop} />
-                <img alt={currentSpaceInfra.image} src={currentSpaceInfra.image}
+                <img alt={currentSpaceInfra.name} src={currentSpaceInfra.image}
                   className="h-60 md:h-72 lg:h-[460px] w-full object-cover lg:object-contain"></img>
               </picture>
             </motion.div>
@@ -47,7 +46,10 @@ const Technology = () => {
             <nav className="flex lg:flex-col items-center justify-center lg:justify-between lg:items-center gap-3 md:gap-4 mb-10 md:mb-12 lg:mb-0 lg:gap-0">
               {technologyData.map((spaceInfra) => (
                 <button
-                  key={spaceInfra.id} className={`h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 rounded-full cursor-pointer transition-colors duration-300 ease-out flex items-center justify-center ${activeSpaceInfraId === spaceInfra.id ?
+                  key={spaceInfra.id} 
+                  aria-label={`Show ${spaceInfra.name}`}
+                  aria-pressed={activeSpaceInfraId === spaceInfra.id}
+                  className={`h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 rounded-full cursor-pointer transition-colors duration-300 ease-out flex items-center justify-center ${activeSpaceInfraId === spaceInfra.id ?
                     ("bg-font-white") : ("bg-transparent border border-white/30 hover:border-font-white")}`} onClick={() => (setActiveSpaceInfraId(spaceInfra.id))}>
                   <span className={`font-bellefair text-sm md:text-lg lg:text-xl ${activeSpaceInfraId === spaceInfra.id ?
                     ("text-black") : ("text-font-white")

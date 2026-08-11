@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from "react"
+import React, {useState} from 'react'
 import { crewData } from "../data/crewData"
 import { motion } from "motion/react"
 
@@ -62,11 +61,13 @@ const Crew = () => {
            
             <div className="flex justify-center lg:justify-start lg:mt-16 lg:mb-0 gap-4 md:gap-5 my-8 md:my-10">
               {crewData.map((member) => (
-                <div 
+                <button 
                   key={member.id} 
+                  aria-label={`View ${member.role} ${member.name}`}
+                  aria-pressed={activeMemberId === member.id}
                   className={`h-2.5 w-2.5 lg:h-3.5 lg:w-3.5 rounded-full cursor-pointer transition-all duration-300 ${activeMemberId === member.id ? ("bg-font-white") : ("bg-white/20 hover:bg-white/50")}`}
                   onClick={() => (setActiveMemberId(member.id))}
-                ></div>
+                ></button>
               ))}
             </div>
           </div>
@@ -78,7 +79,7 @@ const Crew = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              alt={currentMember.image} 
+              alt={`${currentMember.name}-${currentMember.role}`} 
               src={currentMember.image} 
               loading="lazy" 
               className="h-[32vh] md:h-[350px] lg:h-[500px] object-contain lg:object-center"
